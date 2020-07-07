@@ -122,51 +122,14 @@
                     </div>
                 </div>
                 <div class="col-md-7 events-container">
-                    <!--
                     <h2>live</h2>
                     <ul>
-                        
-                        <li><span class="light">24. August 2019: </span>Zell-Kaimt | Weingut Treis/Boos von Waldeckhof | Keltisches Weingelage | <a href="https://de-de.facebook.com/events/381766689088601/"><i class="fa fa-facebook-square"></i></a>
+                        {% for k in site.data.konzerte %}
+                        <li>{{ k.Datum }} | {{ k.Stadt }} {% if k.Veranstaltungsort %}| {{ k.Veranstaltungsort }} {% endif %} | {% if k.Link %}<a href="{{ k.Link }}" target="_blank">{% endif %}{{ k.Name }}{% if k.Link %}</a>{% endif %} {% if k.Facebooklink
+                            %} | <a href="{{ k.Facebooklink }}"><i class="fa fa-facebook-square"></i></a> {% endif %}
                         </li>
-
-
-                        <li><span class="light">18. August 2018: </span>Private City | Private Location | Private Party
-                        </li>
-
-                        <li><span class="light">9. Juni 2018: </span>Zell/Mosel | Weingut Treis/Waldeckhof | Tandemtreffen
-                        </li>
-
-                        <li><span class="light">10. März 2018: </span>Private City | Private Location | Private Party
-                        </li>
-
-                        <li><span class="light">22. Dezember 2017: </span>Traben-Trarbach | 50&#39;s Style Café | Weitere Infos folgen! | <a href="https://de-de.facebook.com/events/282532742184567/"><i class="fa fa-facebook-square"></i></a>
-                        </li>
-
-
-                        <li><span class="light">2. September 2017: </span>Zell/Mosel | Weingut Treis Zell Mosel | A traditional acoustic evening | <a href="https://www.facebook.com/events/1475488412468213/"><i class="fa fa-facebook-square"></i></a></li>
-
-
-                        <li><span class="light">1. September 2017: </span>Reil/Mosel | Weingut Villa Melsheimer | Straßenweinfest Reil |
-                            <a href="https://www.facebook.com/events/250926222085830/?context=create&amp;previousaction=create&amp;ref=5&amp;page_id_source=401098149937218&amp;sid_create=2686980573&amp;action_history=[{%22surface%22%3A%22create_dialog%22%2C"><i class="fa fa-facebook-square"></i></a>
-                        </li>
-
-
-                        <li><span class="light">26. August 2017: </span>Reil/Mosel | Saloon Restaurant | Traditional Acoustic Night |
-                            <a href="https://www.facebook.com/events/1909084906041460/?acontext=%7B%22ref%22%3A%223%22%2C%22ref_newsfeed_story_type%22%3A%22regular%22%2C%22feed_story_type%22%3A%22117%22%2C%22action_history%22%3A%22null%2"><i class="fa fa-facebook-square"></i></a>
-                        </li>
-
-
-                        <li><span class="light">3. August 2017: </span>Bernkastel-Kues | Sommerbühne i.d. Altstadt | Sommerbühne 2017 | <a href="https://www.facebook.com/events/1853242154940770/"><i class="fa fa-facebook-square"></i></a></li>
-
-
-                        <li><span class="light">21. Januar 2017: </span>Cochem | Weingut Daniel Bach | Irische Musik und Moselwein | <a href="https://www.facebook.com/events/1778983245675861/"><i class="fa fa-facebook-square"></i></a></li>
-
-
-                        <li><span class="light">14. Januar 2017: </span>Tawern Kr. Saarburg | MotoMetall Motorrad Teile&amp;Individualisierung | Wintergrillen ab 16.00 Uhr | <a href="https://www.facebook.com/events/1193827904033437/"><i class="fa fa-facebook-square"></i></a></li>
-
-
+                        {% endfor %}
                     </ul>
-                    -->
                 </div>
             </div>
     </section>
